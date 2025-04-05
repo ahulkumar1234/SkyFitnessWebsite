@@ -977,7 +977,7 @@ p#scnd{
     line-height: 60px;
     font-size: 20px;
     position: relative;
-    left: 23rem;
+    left: 20rem;
 }
 #check:checked ~ .navmenu{
        right: 0;
@@ -1010,9 +1010,10 @@ p#scnd{
         right: -100%;
         background-color: rgb(61, 110, 244);
         transition: 0.4s ease-in-out;
+        z-index: 1000;
     }
     .navmenu a:hover {
-       background-color: black;
+       background-color: white;
     }
     .navmenu a {
         padding: 23px 30px;
