@@ -1,0 +1,1182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+header {
+    background-image: url('bg2.jpg.jpg');
+    background-size: cover;
+    /* Cover entire navbar */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent repeating */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black with 60% opacity */
+    background-blend-mode: overlay;
+    /* Blend the colors */
+}
+
+.navtop {
+    color: white;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+.navtop a {
+    color: white;
+    text-decoration: none;
+    padding-right: 70px;
+}
+
+.navtop a:hover {
+    color: rgb(61, 110, 244);
+    font-weight: bolder;
+}
+
+/* .navtop a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding-right: 50px;
+    position: relative; 
+}
+
+.navtop a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 60%;
+    height: 2px;
+    background-color:rgb(9, 71, 240);
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navtop a:hover::after {
+    transform: scaleX(1); 
+} */
+
+.seperatorline {
+    background: linear-gradient(to right, blue, purple);
+    width: 100%;
+    height: 1.5px;
+    /* opacity: 0.5; */
+}
+/* -----------------------------------------------Hambargar-------------------------------------------------------- */
+
+#checkbtn{
+    display: none;
+}
+input#check{
+    display: none;
+}
+/* -----------------------------------------------navbar-------------------------------------------------------- */
+
+/* Navbar styling */
+.navbar {
+    /* background-image: url('your-background.jpg'); /* Add a background image */
+    /* background-size: cover;
+    background-position: center;  */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.navlogo{
+    display: flex;
+    align-items: center;
+}
+.navlogo img {
+    width: auto;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.navlogo h1 {
+    text-decoration: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.navlogo h1 span {
+    text-decoration: none;
+    color: rgb(61, 110, 244);
+}
+
+.navmenu{
+    display: flex;
+    align-items: center;
+}
+/* Navbar links */
+.navmenu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navmenu a:hover{
+    color: rgb(61, 110, 244);
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    min-width: 180px;
+    display: none;
+    /* Initially hidden */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+/* Dropdown Menu Links */
+.dropdown-menu a {
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(238, 238, 248);
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+/* Hover Effect */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    /* Show dropdown on hover */
+}
+
+.navbtn {
+    padding-left: 450px;
+}
+
+.joinbutton {
+    padding: 10px 25px;
+    /* Padding for a better look */
+    border: 2px solid rgb(61, 110, 244);
+    /* Blue border */
+    background-color: transparent;
+    /* Transparent background */
+    color: white;
+    /* Blue text */
+    font-size: 16px;
+    /* Adjust text size */
+    cursor: pointer;
+    /* Pointer cursor */
+    transition: all 0.1s ease-in-out;
+    /* Smooth transition effect */
+    border-radius: 50px;
+    /* Rounded corners */
+    background-color: rgb(61, 110, 244);
+}
+
+/* Hover Effect */
+.joinbutton:hover {
+    background-color: rgb(61, 110, 244);
+    /* Change background to blue */
+    color: white;
+    /* Change text color to white */
+    box-shadow: 2px 2px 20px 5px rgb(61, 110, 244);
+}
+
+
+/* ---------------------------------------------heading------------------------------------------------------ */
+
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 150px;
+}
+
+.heading h2 {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    text-align: center;
+}
+
+.para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.scndbtn {
+    padding-left: 675px;
+    margin-top: 40px;
+}
+
+.scndbtn button {
+    padding: 10px 40px;
+    font-size: 17px;
+    background-color: transparent;
+    border: 2px solid rgb(61, 110, 244);
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    /* Pointer cursor */
+    transition: all 0.1s ease-in-out;
+    /* Smooth transition effect */
+}
+
+.scndbtn button:hover {
+    background-color: transparent;
+    box-shadow: 2px 2px 20px 5px rgb(61, 110, 244);
+}
+
+/* ---------------------------------------Reviewsection---------------------------------------------- */
+
+.review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 20px; */
+    padding-top: 70px;
+}
+
+.review img {}
+
+.review p {
+    color: white;
+    padding-left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+}
+
+.imgreview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+}
+
+.imgreview img {
+    width: 50px;
+}
+
+.imgreview p {
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+}
+
+/* ---------------------------------------HeadingTwo---------------------------------------------- */
+
+
+.headingtwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding-top: 50px;
+}
+
+.headingtwo h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 55px;
+    align-items: center;
+}
+
+/* ---------------------------------------Cards section---------------------------------------------- */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 35px;
+    padding-top: 70px;
+    padding-bottom: 200px;
+    cursor: pointer;
+}
+.card1 {
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    background-image: url('image3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card1 p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 100px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.card1:hover {
+    transform: scale(1.1);
+    /* box-shadow: 1px 1px 15px 1px rgb(61, 110, 244); */
+    border: 1px solid rgb(61, 110, 244);
+}
+.card2 {
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    background-image: url('image1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;    
+}
+.card2 p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 100px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.card2:hover {
+    transform: scale(1.1);
+    /* box-shadow: 1px 1px 15px 1px rgb(61, 110, 244); */
+    border: 1px solid rgb(61, 110, 244);
+}
+.card3 {
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    background-image: url('zumba.jpg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;    
+}
+.card3 p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 100px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.card3:hover {
+    transform: scale(1.1);
+    /* box-shadow: 1px 1px 15px 1px rgb(61, 110, 244); */
+    border: 1px solid rgb(61, 110, 244);
+}
+.card4 {
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    background-image: url('image2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+.card4 p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 100px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.card4:hover {
+    transform: scale(1.1);
+    /* box-shadow: 1px 1px 15px 1px rgb(61, 110, 244); */
+    border: 1px solid rgb(61, 110, 244);
+}
+hr {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: linear-gradient(to right, blue, purple);
+    /* opacity: 0.5; */
+}
+
+/* <!------------------------------------------Home Feature Section 1----------------------------------------> */
+
+.features1{
+    padding-top: 160px;
+}
+.subhead{
+    padding-left: 103px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+.heading3 h2{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 50px;
+   padding-left: 100px;
+}
+.notes p{
+    padding-left: 100px;
+    /* padding-top: 20px; */
+    background-color: rgba(89, 89, 89, 0.829);
+    width: 480px;
+    height: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.checks.featureimg img{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.checks{
+    padding-left: 100px;
+    padding-top: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.check1{
+    font-size: 30px;
+    font-weight: 100;
+}
+.check1 img{
+
+}
+.check2{
+    padding-top: 25px;
+    font-size: 30px;
+    font-weight: 100;
+}
+.check2 img{
+
+}
+.check3{
+    padding-top: 25px;
+    font-size: 30px;
+    font-weight: 100;
+}
+.check3 img{
+
+}
+.featureimg{
+    padding-left: 720px;
+}
+.featureimg img{
+    width: 600px;
+    position: relative;
+    bottom: 450px;
+}
+
+
+/* <!------------------------------------------Home Feature Section 2----------------------------------------> */
+
+
+.features2{
+    /* padding-top: 160px; */
+}
+.subhead{
+    padding-left: 103px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+.heading3 h2{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 50px;
+   padding-left: 100px;
+}
+.notes p{
+    padding-left: 100px;
+    /* padding-top: 20px; */
+    background-color: rgba(89, 89, 89, 0.829);
+    width: 480px;
+    height: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.checks.featureimg img{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.checks{
+    padding-left: 100px;
+    padding-top: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.check1{
+    font-size: 30px;
+    font-weight: 100;
+}
+.check1 img{
+
+}
+.check2{
+    padding-top: 25px;
+    font-size: 30px;
+    font-weight: 100;
+}
+.check2 img{
+
+}
+.check3{
+    padding-top: 25px;
+    font-size: 30px;
+    font-weight: 100;
+}
+.check3 img{
+
+}
+.featureimg{
+    padding-left: 720px;
+}
+.featureimg img{
+    width: 600px;
+    position: relative;
+    bottom: 450px;
+}
+
+/* <!------------------------------------------Home Feature Section 3----------------------------------------> */
+
+
+
+.features3{
+    /* padding-top: 160px; */
+}
+.subhead{
+    padding-left: 103px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+.heading3 h2{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 50px;
+   padding-left: 100px;
+}
+.notes p{
+    padding-left: 100px;
+    /* padding-top: 20px; */
+    background-color: rgba(89, 89, 89, 0.829);
+    width: 480px;
+    height: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.checks.featureimg img{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.checks{
+    padding-left: 100px;
+    padding-top: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.check1{
+    font-size: 30px;
+    font-weight: 100;
+}
+.check1 img{
+
+}
+.check2{
+    padding-top: 25px;
+    font-size: 30px;
+    font-weight: 100;
+}
+.check2 img{
+
+}
+.check3{
+    padding-top: 25px;
+    font-size: 30px;
+    font-weight: 100;
+}
+.check3 img{
+
+}
+.featureimg{
+    padding-left: 720px;
+}
+.featureimg img{
+    width: 600px;
+    position: relative;
+    bottom: 450px;
+}
+
+
+/* <!------------------------------------------Home Feature Section 4----------------------------------------> */
+
+
+.features4{
+    /* padding-top: 160px; */
+}
+.subhead{
+    padding-left: 103px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+.heading3 h2{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 50px;
+   padding-left: 100px;
+}
+.notes p{
+    padding-left: 100px;
+    /* padding-top: 20px; */
+    background-color: rgba(89, 89, 89, 0.829);
+    width: 480px;
+    height: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.checks.featureimg img{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.checks{
+    padding-left: 100px;
+    padding-top: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.check1{
+    font-size: 30px;
+    font-weight: 100;
+}
+.check1 img{
+
+}
+.check2{
+    padding-top: 25px;
+    font-size: 30px;
+    font-weight: 100;
+}
+.check2 img{
+
+}
+.check3{
+    padding-top: 25px;
+    font-size: 30px;
+    font-weight: 100;
+}
+.check3 img{
+
+}
+.featureimg{
+    padding-left: 720px;
+}
+.featureimg img{
+    width: 600px;
+    position: relative;
+    bottom: 450px;
+}
+
+hr.hr2 {
+    width: 100%;
+    height: 10px;
+    border: none;
+    background: linear-gradient(to right, blue, purple);
+    /* opacity: 0.5; */
+}
+
+
+/* <!------------------------------------------Pricing Section----------------------------------------> */
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-left: 105px;
+}
+#scndh2 {
+    /* background-color: #007bff; */
+    /* margin-bottom: 20px; */
+    padding: 44px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    padding-right: 140px;
+}
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 1000px;
+    height: 500px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.plan {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    border: 2px solid  rgb(61, 110, 244);
+}
+.plan h3 {
+    /* color: #ffffff; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    padding-bottom: 50px;
+}
+.plan p{
+    padding-top: 10px;
+    font-weight: 500;
+}
+.btn {
+    display: inline-block;
+    margin-top: 90px;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid rgb(61, 110, 244);
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+}
+.btn:hover {
+    background-color: transparent;
+    box-shadow: 2px 2px 20px 5px rgb(61, 110, 244);
+}
+
+
+/* <!------------------------------------------Registration Form----------------------------------------> */
+
+
+
+.containertwo {
+    width: 50%;
+    margin-left: 400px;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+h2#third{
+    padding-bottom: 50px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+form {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(61, 110, 244);
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    /* font-weight: bold; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(128, 128, 128, 0.793);
+}
+input::placeholder {
+    color: white;
+    font-size: 13px;
+    /* opacity: 0.7; */
+}
+button.scnd {
+    width: 100%;
+    padding: 10px 40px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(61, 110, 244);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.1s ease-in-out;
+}
+button:hover {
+    background-color: transparent;
+    box-shadow: 2px 2px 20px 5px rgb(61, 110, 244);
+}
+
+hr.hr3 {
+    width: 100%;
+    height: 10px;
+    border: none;
+    background: linear-gradient(to right, blue, purple);
+    /* opacity: 0.5; */
+}
+/* <!------------------------------------------About Section----------------------------------------> */
+
+
+.about{
+    padding-left: 400px;
+    padding-top: 150px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about h2{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.about p{
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+p#scnd{
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-weight: 100;
+}
+
+
+
+/* <!------------------------------------------Contact Section----------------------------------------> */
+
+.contact{
+    padding-left: 400px;
+    margin-top: 200px;  
+}
+.contact h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+.contact p{
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.contact p i{
+    color: rgb(61, 110, 244);
+    margin-right: 15px;
+    font-size: 25px;
+}
+.socialicons {
+    margin-top: 30px;
+}
+.socialicons a i{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.socialicons a i:hover{
+   color:rgb(61, 110, 244);
+   transform: translateY(-5px);
+}
+
+
+/* <!------------------------------------------Footer Section----------------------------------------> */
+
+.copyright p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    top: 60px;
+    background-color: rgb(58, 57, 57);
+    font-size: 15px;
+    height: 50px;
+}
+
+
+
+/* <!---------------------------------------------Hambargar--------------------------------------------> */
+
+
+/* Navigation Menu for Mobile */
+@media screen and (max-width: 767px) {
+    .navbar {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    nav ul .fa{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .navbar img {
+        height: 40px;
+    }
+
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .navbar a .dropdown {
+        display: none; /* Hide links by default */
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    .dropdown-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: black;
+        text-align: left;
+    }
+
+    .dropdown-menu a {
+        padding: 10px;
+        display: block;
+    }
+    
+}
+/* <!------------------------------------------Hambargar----------------------------------------> */
+@media only screen and (max-width: 767px) {
+#checkbtn{
+    display: block;
+    line-height: 60px;
+    font-size: 20px;
+    position: relative;
+    left: 23rem;
+}
+#check:checked ~ .navmenu{
+       right: 0;
+       left: 12rem;
+}
+}
+/* <!------------------------------------------ForSmallScreen----------------------------------------> */
+
+@media only screen and (max-width: 767px) {
+
+    header{
+        background-image: url(bg1.jpg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        width: auto;
+
+    }
+    .heading {
+        padding-top: 220px;
+    }
+    .navmenu {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: normal;
+        position: fixed;
+        top: 110px;
+        right: -100%;
+        background-color: rgb(61, 110, 244);
+        transition: 0.4s ease-in-out;
+    }
+    .navmenu a:hover {
+       background-color: black;
+    }
+    .navmenu a {
+        padding: 23px 30px;
+    }
+    .dropdown{
+        display: none;
+    }
+    .navbtn{
+        display: none;
+    }
+    .navbar h1{
+         font-size: 25px;
+         line-height: 60px;
+    }
+    .navtop{
+        font-size: small;
+        padding-left: 15px;
+    }
+    .navtop a{
+        padding-right: 20px;
+    }
+    .heading h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .para{
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 500;
+    }
+    .scndbtn button{
+        display: none;
+    }
+    .review p{
+        padding-left: 10px;
+    }
+    .review{
+        font-size: 0.9rem;
+        padding-top: 0;
+        text-align: center;
+    }
+    .review img{
+        width: 70px;
+    }
+    .imgreview{
+        text-align: center;
+        font-size: small;
+        padding-right: 50px;
+        padding-top: 5px;
+    }
+    .imgreview img{
+        width: 30px;
+    }
+    .headingtwo h2{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .cards{
+        flex-wrap: wrap;
+        padding-bottom: 150px;
+    }
+    .subhead{
+        font-size: 1rem;
+        font-weight: 500;
+        padding-left: 65px;
+    }
+    .heading3 h2{
+        font-size: 2rem;
+        padding-left: 65px;
+    }
+    .notes p{
+        font-size: 0.9rem;
+        padding-left: 65px;
+    }
+    .checks{
+        padding-bottom: 150px;
+    }
+    .checks ,.check1,.check2,.check3{
+        font-size: 1rem;
+    }
+    .checks p img{
+        width: 14px;
+    }
+    .featureimg{
+        padding-left: 0;
+    }
+    .featureimg img {
+        width: 180px;
+        position: relative;
+        bottom: -80px;
+        left: -3%;
+        border-radius: 3%;
+    }
+    .featureimg img:hover{
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        border: 1px solid  rgb(61, 110, 244);
+        cursor: pointer;
+    }
+    hr.hr2 {
+        height: 0.8px;
+    }
+
+    #scndh2{
+        text-align: center;
+        font-size: 2rem;
+        position: relative;
+        top: -400px;
+        padding-right: 50px;
+    }
+    .plan {
+        width: 25%;
+    }
+    .plans{
+        flex-direction: column;
+    }
+    .container {
+        padding-top: 400px;
+        padding-left: 50px;
+    }
+    .containertwo {
+        width: 50%;
+        margin-left: 100px;
+        padding-top: 500px;
+        padding-bottom: 100px;
+    }
+    hr.hr3 {
+        height: 0.8px;
+    }
+    button.scnd {
+        padding: 5px 1px;
+    }
+    input, select {
+        padding: 5px;  
+    }
+    .about{
+        padding-left: 65px;
+    }
+    .about p{
+        font-size: 1rem;
+    }
+    .about h2{
+        font-size: 2rem;
+    }
+    p#scnd {
+        font-size: 0.9rem;
+    }
+    .contact {
+        padding-left: 65px;
+        margin-top: 200px;
+    }
+    .contact p{
+        margin-top: 20px;
+    }
+    .contact p i {
+        color: rgb(61, 110, 244);
+        margin-right: 15px;
+        font-size: 20px;
+    }
+    .socialicons a i {
+        font-size: 25px;
+    }
+    .copyright p {
+        font-size: 12px;
+        height: 35px;
+    }
+}
