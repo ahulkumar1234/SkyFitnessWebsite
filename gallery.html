@@ -1,11 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky Fitness Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #0059b3, #0099ff);
+            overflow-x: hidden;
+        }
+
+        .gymvideo {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gymvideo h2 {
+            background-color: white;
+            color: #000;
+            padding: 15px 25px;
+            border-radius: 12px;
+            display: inline-block;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 32px;
+            /* Responsive font size */
+            max-width: 90%;
+            word-wrap: break-word;
+        }
+
+        .gymvideo-item video {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .gymvideo-item {
+            border: 2px solid white;
+            padding: 50px;
+        }
+
+        /* -------------------------------------Trainers---------------------------------------------- */
+        .trainers {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .trainers h2 {
+            background-color: white;
+            color: #000;
+            padding: 15px 25px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 32px;
+            max-width: 90%;
+        }
+        .trainers h3{
+            color: white;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+
+        .trainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            border: 2px solid white;
+            padding: 50px;
+        }
+
+        .trainer a {
+            display: block;
+            max-width: 250px;
+            width: 100%;
+        }
+
+        .trainer img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .trainer img:hover {
+            transform: scale(1.05);
+        }
+
+        /* ------------------------------Founder--------------------------------------- */
+
+        .founder {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .founder h2 {
+            background-color: white;
+            color: #000;
+            padding: 15px 25px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 32px;
+            max-width: 90%;
+        }
+
+        .founder a {
+            display: inline-block;
+            margin: 10px;
+        }
+        .image{
+            border: 2px solid white;
+            padding: 50px;
+        }
+
+        .founder img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .founder img:hover {
+            transform: scale(1.05);
+        }
+
+        /*----------------------------------For Responsive---------------------------------------*/
+        @media (min-width: 768px) {
+            .gallery h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .trainers h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .founder a {
+                display: block;
+                margin: 10px auto;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .founder h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <section>
+        <div class="gymvideo">
+            <h2>Our Gym Tour</h2>
+            <div class="gymvideo-item">
+                <video controls autoplay loop muted playsinline>
+                    <source src="gymvideo2.mp4" type="video/mp4">
+                </video>
+                <video controls autoplay loop muted playsinline>
+                    <source src="gymvideo2.mp4" type="video/mp4">
+                </video>
+                <video controls autoplay loop muted playsinline>
+                    <source src="gymvideo.mp4" type="video/mp4">
+                </video>
+
+            </div>
+        </div>
+        <div class="trainers">
+            <h2>Our Certified Trainers</h2>
+            <div class="trainer">
+                <a href="https://www.instagram.com/i_am_rajiv?igsh=MTkxMjcxMDF4dzR3cw==" target="_blank"><img
+                        src="rajiv.jpg" alt="Trainer Pic"></a>
+                <a href="https://www.instagram.com/dr.pushpa_barda?igsh=bThiZ25ibmZiZjho" target="_blank"><img
+                        src="pusha.jpg" alt="Trainer Pic"></a>
+                <a href="https://www.instagram.com/_vishal.si?igsh=eDNjOXpvNms2MzRk" target="_blank"><img
+                        src="vishal.jpg" alt="Trainer Pic"></a>
+                        <h3>Click on the pictures to reach them</h3>
+            </div>
+        </div>
+        <div class="founder">
+            <h2>Founder of Sky Fitness</h2>
+            <div class="image">
+            <a href="https://www.instagram.com/ravi_" target="_blank"><img src="founder.jpg" alt="Founder"></a>
+            <a href="https://www.instagram.com/ravi_" target="_blank"><img src="founder2.jpg" alt="Founder"></a>
+        </div>
+        </div>
+    </section>
 </body>
+
 </html>
