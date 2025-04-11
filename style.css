@@ -7,7 +7,7 @@ body{
   overflow-x: hidden;
 }
 :root {
-    --primary-color: rgb(61, 110, 244);;
+    --primary-color: rgb(61, 110, 244);
     --btn-color: rgb(14, 196, 48);
   }
   .hamburger--slider-r {
@@ -23,6 +23,9 @@ nav{
     height: 12vh;
     position: fixed;
     z-index: 1000;
+}
+.home{
+    background-color: var(--primary-color);
 }
 .logo img{
     width: 4vw;
@@ -78,7 +81,6 @@ ul li a:hover {
     border-radius: 7px;
     background-color: var(--primary-color);
     color: white;
-    /* font-weight: 550; */
     border: none;
     cursor: pointer;
     text-decoration: none;
@@ -86,13 +88,10 @@ ul li a:hover {
 }
 
 .btn button:hover{
-   background-color: rgb(14, 196, 48);
+   background-color: var(--btn-color)
 }
 
 /* -------------------------------Maincontent-------------------------------- */
-main{
-    
-}
 .container{
     font-family: Arial, Helvetica, sans-serif;
     padding: 30vh 10vw;
@@ -115,7 +114,6 @@ main{
    font-size: 17px;
    padding-top: 10px;
    font-weight: 500;
-   /* padding-bottom: 20px; */
 }
 .container a{
     font-size: 0.9rem;
@@ -124,13 +122,12 @@ main{
     border-radius: 7px;
     background-color: var(--primary-color);
     color: white;
-    /* font-weight: 550; */
     border: none;
     cursor: pointer;
     text-decoration: none;
 }
 .container a:hover{
-     background-color: black;
+     background-color: var(--btn-color);
 }
 
 /* -------------------------------Container2-------------------------------- */
@@ -150,9 +147,6 @@ main{
 
 /* -------------------------------Featuresection-------------------------------- */
 
-.feature-section{
-  
-}
 .heading{
     text-align: center;
     font-size: 5rem;
@@ -448,6 +442,10 @@ main{
     }
     .logo img {
         width: 5vw;
+    }
+    #register{
+        background: white;
+        color: black;
     }
     /* .menu{
         position: absolute;

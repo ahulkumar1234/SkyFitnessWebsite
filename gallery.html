@@ -39,12 +39,14 @@
 
         .gymvideo-item video {
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
+            border: 1px solid white;
         }
 
         .gymvideo-item {
-            border: 2px solid white;
-            padding: 50px;
+            border: 2px solid transparent;
+            padding: 20px;
+            background-color: #000;
         }
 
         /* -------------------------------------Trainers---------------------------------------------- */
@@ -64,22 +66,14 @@
             font-size: 32px;
             max-width: 90%;
         }
-        .trainers h3{
-            color: white;
-            padding: 10px;
-            border: 1px solid white;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            text-decoration: none;
-        }
-
         .trainer {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
             border: 2px solid white;
-            padding: 50px;
+            padding: 30px;
+            background-color: #000;
         }
 
         .trainer a {
@@ -90,13 +84,13 @@
 
         .trainer img {
             width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
             transition: transform 0.3s ease;
         }
 
         .trainer img:hover {
             transform: scale(1.05);
+            border: 1px solid white;
         }
 
         /* ------------------------------Founder--------------------------------------- */
@@ -122,15 +116,16 @@
             display: inline-block;
             margin: 10px;
         }
-        .image{
+
+        .image {
             border: 2px solid white;
-            padding: 50px;
+            padding: 10px;
+            background-color: rgb(44, 44, 44);
         }
 
         .founder img {
             width: 100%;
             max-width: 300px;
-            border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
         }
@@ -138,6 +133,48 @@
         .founder img:hover {
             transform: scale(1.05);
         }
+
+        /*----------------------------------Gym Gallery---------------------------------------*/
+        .gym-gallery h2{
+            background-color: white;
+            color: #000;
+            padding: 15px 15px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 32px;
+            max-width: 90%;
+        }
+        .gym-gallery {
+            padding: 40px 20px;
+            background-color: #000;
+            /* Black background as per your theme */
+            color: #fff;
+            text-align: center;
+        }
+
+        .images-gym {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .images-gym img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border: 1px solid white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .images-gym img:hover {
+            transform: scale(1.05);
+        }
+
 
         /*----------------------------------For Responsive---------------------------------------*/
         @media (min-width: 768px) {
@@ -151,7 +188,7 @@
                 font-size: 32px;
             }
         }
-
+/* ----------------------------------Founder------------------------------------ */
         @media (max-width: 600px) {
             .founder a {
                 display: block;
@@ -164,9 +201,29 @@
                 font-size: 32px;
             }
         }
-    </style>
-</head>
+/* ---------------------------------Gym Gallery-------------------------------- */
+        @media (max-width: 768px) {
+            .images-gym {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
 
+            .images-gym img {
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .images-gym {
+                grid-template-columns: 1fr;
+            }
+
+            .images-gym img {
+                height: 200px;
+            }
+        }
+    </style>
+
+</head>
 <body>
     <section>
         <div class="gymvideo">
@@ -178,10 +235,6 @@
                 <video controls autoplay loop muted playsinline>
                     <source src="gymvideo3.mp4" type="video/mp4">
                 </video>
-                <video controls autoplay loop muted playsinline>
-                    <source src="gymvideo.mp4" type="video/mp4">
-                </video>
-
             </div>
         </div>
         <div class="trainers">
@@ -193,15 +246,42 @@
                         src="pusha.jpg" alt="Trainer Pic"></a>
                 <a href="https://www.instagram.com/_vishal.si?igsh=eDNjOXpvNms2MzRk" target="_blank"><img
                         src="vishal.jpg" alt="Trainer Pic"></a>
-                        <h3>Click on the pictures to reach them</h3>
             </div>
         </div>
         <div class="founder">
             <h2>Founder of Sky Fitness</h2>
             <div class="image">
-            <a href="https://www.instagram.com/ravi_" target="_blank"><img src="founder.jpg" alt="Founder"></a>
-            <a href="https://www.instagram.com/ravi_" target="_blank"><img src="founder2.jpg" alt="Founder"></a>
+                <a href="https://www.instagram.com/ravi_" target="_blank"><img src="founder.jpg" alt="Founder"></a>
+                <a href="https://www.instagram.com/ravi_" target="_blank"><img src="founder2.jpg" alt="Founder"></a>
+            </div>
         </div>
+    </section>
+    <section>
+        <div class="gym-gallery">
+           <h2>Gallery</h2>
+            <div class="images-gym">
+                <img src="img1.jpg" alt="clients">
+                <img src="img2.jpg" alt="clients">
+                <img src="img3.jpg" alt="clients">
+                <img src="img4.jpg" alt="clients">
+                <img src="img5.jpg" alt="clients">
+                <img src="img6.jpg" alt="clients">
+                <img src="img7.jpg" alt="clients">
+                <img src="img8.jpg" alt="clients">
+                <img src="img9.jpg" alt="clients">
+                <img src="img10.jpg" alt="clients">
+                <img src="img11.jpg" alt="clients">
+                <img src="img12.jpg" alt="clients">
+                <img src="img13.jpg" alt="clients">
+                <img src="img14.jpg" alt="clients">
+                <img src="img15.jpg" alt="clients">
+                <img src="img16.jpg" alt="clients">
+                <img src="img17.jpg" alt="clients">
+                <img src="img18.jpg" alt="clients">
+                <img src="img19.jpg" alt="clients">
+                <img src="img20.jpg" alt="clients">
+                <img src="img21.jpg" alt="clients">
+            </div>
         </div>
     </section>
 </body>

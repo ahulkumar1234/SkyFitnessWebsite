@@ -86,7 +86,7 @@
 <body>
   <div class="form-container">
     <h2>Sky Fitness Registration</h2>
-    <form action="#" method="POST">
+    <form id="registrationForm" action="#" method="POST">
       <div class="form-group">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" placeholder="Your full name" required />
@@ -136,5 +136,18 @@
       <button type="submit">Register</button>
     </form>
   </div>
+
+  <!----------------------Success message redirect next page javascript----------------------------->
+  <script>
+    const form = document.getElementById("registrationForm");
+  
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Stop default action
+      // ✅ Perform custom tasks if needed
+      window.location.href = "thankyou.html"; // Redirect to thankyou page
+    });
+
+    
+  </script>
 </body>
 </html>
