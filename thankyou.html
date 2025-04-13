@@ -2,66 +2,105 @@
 <html>
 <head>
   <title>Thank You</title>
-  <!-- <meta http-equiv="refresh" content="5;url=index.html" /> -->
+  <meta http-equiv="refresh" content="5;url=index.html"/>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f0f8ff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .thankyou-message {
-      background-color: #ffffff;
-      padding: 40px 30px;
-      border-radius: 12px;
-      border-left: 6px solid #218838;
-      box-shadow: 0 0 15px rgba(0, 128, 0, 0.1);
-      max-width: 500px;
-    }
+.thankyou-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
 
-    .thankyou-message h2 {
-      color: #218838;
-      font-size: 30px;
-      margin-bottom: 10px;
-      font-weight:500;
-    }
+.thankyou-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  animation: fadeIn 0.8s ease;
+  align-items: center;
+  justify-content: center;
+}
 
-    .thankyou-message p {
-      color: #333;
-      font-size: 18px;
-      margin-bottom: 25px;
-    }
+.thankyou-card h2 {
+  color: #2c5364;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
 
-    .back-btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #218838;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
+.thankyou-card p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
 
-    .back-btn:hover {
-      background-color: #218838;
-    }
+.back-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #2c5364;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
 
+.back-btn:hover {
+  background-color: #1b2e3e;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 480px) {
+  .thankyou-card {
+    padding: 30px 20px;
+  }
+
+  .thankyou-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .thankyou-card p {
+    font-size: 1rem;
+  }
+
+  .back-btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+}
+/* 👇 Optional: Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   </style>
 </head>
 <body>
   <div class="thankyou-message">
-    <h2>🎉Thank You!</h2>
-    <p>Your registration was successful. We’ll get in touch soon!</p>
-    <a href="index.html" class="back-btn">← Back to Home</a>
+    <div class="thankyou-card">
+      <h2>🎉Thank You!</h2>
+      <p>Your registration was successful.<br>We’ll get in touch with you shortly.</p>
+      <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
   </div>
-
+  
 
   <script>
     form.addEventListener("submit", function (e) {

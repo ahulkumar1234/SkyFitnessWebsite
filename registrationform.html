@@ -80,33 +80,66 @@
   button:hover {
     background-color: #005bb5;
   }
+
+
+  /*----------------------------------------Loader Overlay------------------------------------------*/
+#loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 32, 39, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+
+/* Spinner Style */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #ffffff;
+  border-top: 8px solid #2c5364;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
   
   </style>
 </head>
 <body>
   <div class="form-container">
     <h2>Sky Fitness Registration</h2>
-    <form id="registrationForm" action="#" method="POST">
+    <form name="submit-to-google-sheet" >
       <div class="form-group">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" placeholder="Your full name" required />
       </div>
-
+    
       <div class="form-group">
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email" placeholder="you@example.com" required />
       </div>
-
+    
       <div class="form-group">
         <label for="phone">Phone Number</label>
         <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required />
       </div>
-
+    
       <div class="form-group">
         <label for="dob">Date of Birth</label>
         <input type="date" id="dob" name="dob" required />
       </div>
-
+    
       <div class="form-group">
         <label for="gender">Gender</label>
         <select id="gender" name="gender" required>
@@ -116,7 +149,7 @@
           <option value="Other">Other</option>
         </select>
       </div>
-
+    
       <div class="form-group">
         <label for="plan">Select Plan</label>
         <select id="plan" name="plan" required>
@@ -124,30 +157,49 @@
           <option value="Basic">Basic</option>
           <option value="Standard">Standard</option>
           <option value="Premium">Premium</option>
-          <option value="Premium">2 Days Free Trial</option>
+          <option value="Trial">2 Days Free Trial</option>
         </select>
       </div>
-
+    
       <div class="form-group">
         <label for="goals">Fitness Goals</label>
         <textarea id="goals" name="goals" rows="3" placeholder="Write your goals..."></textarea>
       </div>
-
+    
       <button type="submit">Register</button>
     </form>
   </div>
 
-  <!----------------------Success message redirect next page javascript----------------------------->
-  <script>
-    const form = document.getElementById("registrationForm");
-  
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Stop default action
-      // ✅ Perform custom tasks if needed
-      window.location.href = "thankyou.html"; // Redirect to thankyou page
-    });
 
-    
+  <div id="loader-overlay">
+    <div class="spinner"></div>
+  </div>
+  
+
+
+  <!----------------------Data Store On GoogleSheet----------------------------->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzjvaohsGK_zdueXjVunBO0JsBrlt-pjtDR8e7XChmVsvgNl34v7IISKWmdSqz1MIpD/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const loader = document.getElementById('loader-overlay');
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      loader.style.display = 'flex'; // Show loader
+  
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          loader.style.display = 'none'; // Hide loader
+          window.location.href = "thankyou.html";
+        })
+        .catch(error => {
+          loader.style.display = 'none'; // Hide loader
+          alert('Something went wrong!');
+          console.error('Error!', error.message);
+        });
+    });
   </script>
+  
+  
 </body>
 </html>
