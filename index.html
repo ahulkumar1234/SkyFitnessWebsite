@@ -245,18 +245,26 @@
 <script>
     const whatsappBtn = document.querySelector('.btn.whatsapp');
     const instaBtn = document.getElementById('insta-btn');
-
+  
     whatsappBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      instaBtn.style.display = instaBtn.style.display === 'none' ? 'block' : 'none';
+      // If Instagram is hidden, show it and stop redirect
+      if (instaBtn.style.display === 'none' || instaBtn.style.display === '') {
+        e.preventDefault(); // Stop link redirect only when showing Insta
+        instaBtn.style.display = 'block';
+      } else {
+        // If Instagram is already visible, allow WhatsApp to open
+        instaBtn.style.display = 'none';
+        // Do NOT preventDefault here — allow redirect to WhatsApp
+      }
     });
-
+  
+    // Hide Instagram when clicked outside
     document.addEventListener('click', function(e) {
       if (!e.target.closest('.floating-buttons')) {
         instaBtn.style.display = 'none';
       }
     });
   </script>
-
+  
 </body>
 </html>
