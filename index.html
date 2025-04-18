@@ -211,7 +211,7 @@
     <div class="contact" id="contact">
         <a href="https://www.facebook.com/share/18sLQ7hcYE/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.instagram.com/the_skyfitness?igsh=OXp3YzZqZXZ4ZnBi" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#contact"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://wa.me/917979958116?text=Hi%2C%20I%27m%20interested%20in%20your%20services"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="#contact"><i class="fa-brands fa-telegram"></i></a>
     </div>
     <p class="copyright">
@@ -245,26 +245,18 @@
 <script>
     const whatsappBtn = document.querySelector('.btn.whatsapp');
     const instaBtn = document.getElementById('insta-btn');
-  
+
     whatsappBtn.addEventListener('click', (e) => {
-      // If Instagram is hidden, show it and stop redirect
-      if (instaBtn.style.display === 'none' || instaBtn.style.display === '') {
-        e.preventDefault(); // Stop link redirect only when showing Insta
-        instaBtn.style.display = 'block';
-      } else {
-        // If Instagram is already visible, allow WhatsApp to open
-        instaBtn.style.display = 'none';
-        // Do NOT preventDefault here — allow redirect to WhatsApp
-      }
+      e.preventDefault();
+      instaBtn.style.display = instaBtn.style.display === 'none' ? 'block' : 'none';
     });
-  
-    // Hide Instagram when clicked outside
+
     document.addEventListener('click', function(e) {
       if (!e.target.closest('.floating-buttons')) {
         instaBtn.style.display = 'none';
       }
     });
   </script>
-  
+
 </body>
 </html>
