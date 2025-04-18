@@ -16,3 +16,8 @@ const typed = new Typed('.multiple', {
     backdelay: 1000,
     loop: true,
   });
+  
+
+
+
+  

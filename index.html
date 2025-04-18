@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Website</title>
+    <title>Sky Fitness</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -45,7 +45,7 @@
                 <a href="registrationform.html" class="btn2">Join Us</a>
         </div>
         <div class="container2">
-            <img src="https://gymjunkies.com/wp-content/uploads/2018/04/Make-A-bodybuilding-Workout-Schedule.jpg" alt="poster image">  
+            <img src="https://wallpaperaccess.com/full/2465431.jpg" alt="poster image">  
         </div>
         
      <!-- -----------------------------------------Feature Section------------------------------------------- -->
@@ -212,12 +212,24 @@
         <a href="https://www.facebook.com/share/18sLQ7hcYE/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.instagram.com/the_skyfitness?igsh=OXp3YzZqZXZ4ZnBi" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         <a href="#contact"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="#contact"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#contact"><i class="fa-brands fa-telegram"></i></a>
     </div>
     <p class="copyright">
         &copy; Sky Fitness 2025 - All Rights Reserved
     </p>
 </footer>
+
+<!-- ------------------------------Social floating buttons--------------------------------------------- -->
+
+<div class="floating-buttons">
+    <a href="https://wa.me/917979958116?text=Hi%2C%20I'm%20interested%20in%20your%20services" 
+       class="btnn whatsapp" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/30/ffffff/whatsapp.png" alt="WhatsApp">
+    </a>
+
+  </div>
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -228,5 +240,23 @@
 </script>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="script.js"></script>
+
+<!-- ------------------------------Social floating buttons--------------------------------------------- -->
+<script>
+    const whatsappBtn = document.querySelector('.btn.whatsapp');
+    const instaBtn = document.getElementById('insta-btn');
+
+    whatsappBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      instaBtn.style.display = instaBtn.style.display === 'none' ? 'block' : 'none';
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.floating-buttons')) {
+        instaBtn.style.display = 'none';
+      }
+    });
+  </script>
+
 </body>
 </html>

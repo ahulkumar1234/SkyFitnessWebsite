@@ -139,7 +139,7 @@ ul li a:hover {
     width: 33vw;
     height: auto;
     position: absolute;
-    top: 25vh;
+    top: 27vh;
     left: 60vw;
     border-radius: 7px;
     /* border: 9px solid var(--primary-color); */
@@ -416,6 +416,34 @@ ul li a:hover {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* <!-- ------------------------------Social floating buttons--------------------------------------------- --> */
+
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  .btnn {
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  .btnn img {
+    width: 30px;
+    height: 30px;
+  }
+  /* .btnn.instagram {
+    background-color: #E1306C;
+    display: none;
+  } */
+
 /* ---------------------------scrollbar------------------------------------- */
 
 ::-webkit-scrollbar{
@@ -429,7 +457,7 @@ ul li a:hover {
 /* -----------------------------ResponsiveDesign----------------------------- */
 
 @media (max-width:1200px){
-    hmtl{
+    html{
         font-size: 55%;
     }
 }
@@ -439,6 +467,7 @@ ul li a:hover {
     }
     .logo {
         gap: 10px;
+        font-size: 4.5rem;
     }
     .logo img {
         width: 5vw;
@@ -490,9 +519,10 @@ ul li a:hover {
 @media (max-width:786px){
     .logo {
         gap: 10px;
+        font-size: 3.5rem;
     }
     .logo img {
-        width: 6vw;
+        width: 5vw;
     }
     .container{
         flex-direction: column;
@@ -546,10 +576,10 @@ ul li a:hover {
     }
     .logo {
         gap: 10px;
-        font-size: 2.2rem;
+        font-size: 3.3rem;
     }
     .logo img {
-        width: 8vw;
+        width: 7vw;
     }
 }
 @media(max-width:480px){
@@ -662,7 +692,7 @@ ul li a:hover {
     }
     .logo {
         gap: 10px;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 }
 @media (max-width: 450px){
@@ -975,5 +1005,4 @@ ul li a:hover {
       }
 }
 
-/* ------------------------------------RegistrationForm---------------------------------------- */
 

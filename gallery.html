@@ -66,6 +66,7 @@
             font-size: 32px;
             max-width: 90%;
         }
+
         .trainer {
             display: flex;
             flex-wrap: wrap;
@@ -104,7 +105,7 @@
             background-color: white;
             color: #000;
             padding: 15px 25px;
-            border-radius: 12px;
+            /* border-radius: 12px; */
             display: inline-block;
             margin-bottom: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -135,7 +136,7 @@
         }
 
         /*----------------------------------Gym Gallery---------------------------------------*/
-        .gym-gallery h2{
+        .gym-gallery h2 {
             background-color: white;
             color: #000;
             padding: 15px 15px;
@@ -146,6 +147,7 @@
             font-size: 32px;
             max-width: 90%;
         }
+
         .gym-gallery {
             padding: 40px 20px;
             background-color: #000;
@@ -174,6 +176,37 @@
         .images-gym img:hover {
             transform: scale(1.05);
         }
+        
+        /* <!-- ------------------------------Social floating buttons--------------------------------------------- --> */
+
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .btn {
+            background-color: #25D366;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .btn img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .btn.instagram {
+            background-color: #E1306C;
+            display: none;
+        }
+
 
 
         /*----------------------------------For Responsive---------------------------------------*/
@@ -188,7 +221,8 @@
                 font-size: 32px;
             }
         }
-/* ----------------------------------Founder------------------------------------ */
+
+        /* ----------------------------------Founder------------------------------------ */
         @media (max-width: 600px) {
             .founder a {
                 display: block;
@@ -201,7 +235,8 @@
                 font-size: 32px;
             }
         }
-/* ---------------------------------Gym Gallery-------------------------------- */
+
+        /* ---------------------------------Gym Gallery-------------------------------- */
         @media (max-width: 768px) {
             .images-gym {
                 grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -224,6 +259,7 @@
     </style>
 
 </head>
+
 <body>
     <section>
         <div class="gymvideo">
@@ -240,7 +276,7 @@
         <div class="trainers">
             <h2>Our Certified Trainers</h2>
             <div class="trainer">
-                <a href="https://www.instagram.com/i_am_rajiv?igsh=MTkxMjcxMDF4dzR3cw==" target="_blank"><img
+                <a href="" target="_blank"><img
                         src="rajiv.jpg" alt="Trainer Pic"></a>
                 <a href="https://www.instagram.com/dr.pushpa_barda?igsh=bThiZ25ibmZiZjho" target="_blank"><img
                         src="pusha.jpg" alt="Trainer Pic"></a>
@@ -258,7 +294,7 @@
     </section>
     <section>
         <div class="gym-gallery">
-           <h2>Gallery</h2>
+            <h2>Gallery</h2>
             <div class="images-gym">
                 <img src="img1.jpg" alt="clients">
                 <img src="img2.jpg" alt="clients">
@@ -291,6 +327,37 @@
             </div>
         </div>
     </section>
+
+    <!-- ------------------------------Social floating buttons--------------------------------------------- -->
+
+    <div class="floating-buttons">
+        <a href="https://wa.me/917979958116?text=Hi%2C%20I'm%20interested%20in%20your%20services" class="btn whatsapp"
+            target="_blank">
+            <img src="https://img.icons8.com/ios-filled/30/ffffff/whatsapp.png" alt="WhatsApp">
+        </a>
+
+        <a href="https://www.instagram.com/the_skyfitness?igsh=OXp3YzZqZXZ4ZnBi" class="btn instagram" target="_blank" id="insta-btn">
+            <img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram">
+        </a>
+    </div>
+
+    <!-- ------------------------------Social floating buttons--------------------------------------------- -->
+
+    <script>
+        const whatsappBtn = document.querySelector('.btn.whatsapp');
+        const instaBtn = document.getElementById('insta-btn');
+
+        whatsappBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            instaBtn.style.display = instaBtn.style.display === 'none' ? 'block' : 'none';
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.floating-buttons')) {
+                instaBtn.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
