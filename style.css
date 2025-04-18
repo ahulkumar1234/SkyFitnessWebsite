@@ -458,7 +458,7 @@ ul li a:hover {
 
 @media (max-width:1200px){
     html{
-        font-size: 55%;
+        font-size: 70%;
     }
 }
 @media (max-width:991px){
@@ -583,6 +583,7 @@ ul li a:hover {
     }
 }
 @media(max-width:480px){
+    
     .menu ul{
         display: block;
     }
@@ -750,6 +751,13 @@ ul li a:hover {
         padding: 20px 0px;
         display: none;
       }
+      ul li a:first-child {
+        text-decoration: none;
+        color: #fff;
+        padding: 20px 10px;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 617px) {
@@ -783,6 +791,7 @@ ul li a:hover {
         color: #fff;
         padding: 20px 10px;
         font-weight: 500;
+        font-size: 1.5rem;
     }
     ul li a:first-child:hover {
         background-color: #fff;
@@ -823,8 +832,9 @@ ul li a:hover {
       ul li a:first-child {
           text-decoration: none;
           color: #fff;
-          padding: 15px 10px;
+          padding: 10px 10px;
           font-weight: 500;
+          font-size: 1.5rem;
       }
       ul li a:first-child:hover {
           background-color: #fff;
