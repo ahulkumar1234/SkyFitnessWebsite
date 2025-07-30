@@ -1,0 +1,47 @@
+{
+  "name": "sky-fitness-website",
+  "version": "1.0.0",
+  "description": "Modern fitness website for Sky Fitness gym with responsive design and interactive features",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html",
+    "dev": "live-server --port=3000 --open=/index.html --watch=.",
+    "build": "npm run optimize-images && npm run minify-css && npm run minify-js",
+    "optimize-images": "imagemin '*.{jpg,png,webp,avif}' --out-dir=optimized-images",
+    "minify-css": "cleancss -o style.min.css style.css",
+    "minify-js": "uglifyjs script.js -o script.min.js",
+    "serve": "http-server -p 3000 -o"
+  },
+  "keywords": [
+    "fitness",
+    "gym",
+    "website",
+    "responsive",
+    "modern",
+    "sky-fitness"
+  ],
+  "author": "Sky Fitness Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "typed.js": "^2.1.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sky-fitness/website.git"
+  },
+  "homepage": "https://sky-fitness.github.io/website"
+}

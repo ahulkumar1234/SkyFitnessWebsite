@@ -8,9 +8,97 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="dist/hamburgers.css" rel="stylesheet">
-</head>
-<body>
-    <nav>
+    
+    <!-- Modern CSS Features -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Enhanced hover effects */
+        .feature-box1 {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .feature-box1:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        /* Improved button animations */
+        .btn2, .box a, button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn2::before, .box a::before, button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn2:hover::before, .box a:hover::before, button:hover::before {
+            left: 100%;
+        }
+        
+        /* Modern card shadows */
+        .box {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .box:hover {
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+        }
+    </style>
+  </head>
+  <body>
+      <!-- Loading Screen -->
+      <div class="loading-screen" id="loadingScreen">
+          <div class="loader"></div>
+      </div>
+      
+      <nav>
         <div class="logo">
             <img src="skylogo.png.jpg" alt="">
             Sky<span>Fitness</span>
